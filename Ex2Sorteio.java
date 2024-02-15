@@ -7,11 +7,9 @@ public class Ex2Sorteio {
 
         int numAleatorio = (int) ((Math.random() * 1000) + 1);
 
-        boolean loop = true;
-
         int erros = 0;
 
-        while(loop == true) {
+        while(true) {
 
             System.out.println("Palpite um número: ");
             int palpite = teclado.nextInt();
@@ -22,12 +20,12 @@ public class Ex2Sorteio {
                 break;
             } else if(palpite < numAleatorio) {
 
-                System.out.println("Palpite menor que o número sorteado");
+                System.out.println("Palpite MENOR que o número sorteado");
 
                 erros += 1;
             } else if(palpite > numAleatorio) {
 
-                System.out.println("Palpite maior que número sorteado");
+                System.out.println("Palpite MAIOR que número sorteado");
 
                 erros += 1;
             }
