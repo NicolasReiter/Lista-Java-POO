@@ -1,4 +1,4 @@
-package Exercicios.Repeticoes;
+package Repeticoes;
 
 import java.util.*;
 
@@ -36,7 +36,6 @@ public class Ex3Permuta {
                 copia2.add(String.valueOf(vetor2[i]));
             }
         }
-
 
         for (int i = 0; i < copia1.size(); i++) {
             if (!Objects.equals(copia1.get(i), copia2.get(i))) {
