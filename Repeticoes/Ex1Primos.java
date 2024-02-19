@@ -1,4 +1,4 @@
-package Exercicios;
+package Repeticoes;
 
 import java.util.Scanner;
 
