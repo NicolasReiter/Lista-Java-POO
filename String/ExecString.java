@@ -18,7 +18,7 @@ public class ExecString {
 
         if(getFrase1().contains(getFrase2())) {
 
-            System.out.println("contem poha");
+            System.out.println("Contem");
         }
     }
 
