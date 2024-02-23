@@ -10,15 +10,15 @@ public class Ex3Permuta {
         boolean permuta = false;
 
         System.out.println("Digite o 1º número para ver se é permutação");
-        int num1 = teclado.nextInt();
+        int numero1 = teclado.nextInt();
         System.out.println("Digite o 2º número para ver se é permutação");
-        int num2 = teclado.nextInt();
+        int numero2 = teclado.nextInt();
 
-        String valorTexto1 = String.valueOf(num1);
-        String valorTexto2 = String.valueOf(num2);
+        String stringNumero1 = String.valueOf(numero1);
+        String stringNumero2 = String.valueOf(numero2);
 
-        char vetor1[] = valorTexto1.toCharArray();
-        char vetor2[] = valorTexto2.toCharArray();
+        char vetor1[] = stringNumero1.toCharArray();
+        char vetor2[] = stringNumero2.toCharArray();
 
         Arrays.sort(vetor1);
         Arrays.sort(vetor2);
