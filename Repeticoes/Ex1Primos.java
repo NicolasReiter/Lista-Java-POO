@@ -10,7 +10,7 @@ public class Ex1Primos {
         System.out.println("Digite um número: ");
         int n = teclado.nextInt();
 
-        if(ehPrimo(n) == true) {
+        if(numeroPrimo(n) == true) {
 
             System.out.println("É primo");
         } else {
@@ -19,9 +19,9 @@ public class Ex1Primos {
         }
     }
 
-    private static boolean ehPrimo(int n) {
-        for (int j = 2; j < n; j++) {
-            if (n % j == 0)
+    private static boolean numeroPrimo(int n) {
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0)
                 return false;
         }
         return true;
