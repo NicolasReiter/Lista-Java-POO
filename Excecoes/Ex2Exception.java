@@ -6,7 +6,7 @@ public class Ex2Exception {
     public static void main(String[] args) throws MenorQueException, MaiorQueException {
 
         Scanner teclado = new Scanner(System.in);
-        int numAleatorio = (int) ((Math.random() * 1000) + 1);
+        int numAleatorio = (int) ((Math.random() * 10) + 1);
 
         int erros = 0;
 
@@ -19,14 +19,20 @@ public class Ex2Exception {
 
                 System.out.println("Você acertou o número!!");
                 break;
-            } else if(palpite < numAleatorio) {
-
-                erros += 1;
-                throw new MenorQueException();
-            } else if(palpite > numAleatorio) {
-
-                erros += 1;
-                throw new MaiorQueException();
+            } else if (palpite <  numAleatorio){
+                try {
+                    throw new MenorQueException();
+                } catch (MenorQueException e) {
+                    erros += 1;
+                    System.out.println(e.getMessage());
+                }
+            } else if (palpite > numAleatorio) {
+                try {
+                    throw new MaiorQueException();
+                } catch (MaiorQueException e) {
+                    erros += 1;
+                    System.out.println(e.getMessage());
+                }
             }
         }
 
