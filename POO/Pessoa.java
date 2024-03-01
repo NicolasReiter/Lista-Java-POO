@@ -9,6 +9,7 @@ public class Pessoa {
     int mes;
     int ano;
     String nome;
+    Universidade universidade;
 
     public Pessoa(int dia, int mes, int ano) {
         setDia(dia);
@@ -16,16 +17,9 @@ public class Pessoa {
         setAno(ano);
     }
 
-    public static void main(String[] args) {
-        Pessoa einstein = new Pessoa(14, 3, 1879);
-        einstein.setNome("Albert Einstein");
-        int idadeAtualEinstein = einstein.caculaIdade(einstein.ano);
-        System.out.println("Idade de " + einstein.informaNome() + " se ele ainda estive vivo: " + idadeAtualEinstein);
+    public static void mostraUniversidade(Universidade universidade) {
 
-        Pessoa newton = new Pessoa(4, 1, 1643);
-        newton.setNome("Isaac Newton");
-        int idadeAtualNewton = newton.caculaIdade(newton.ano);
-        System.out.println("Idade de " + newton.informaNome() + " se ele ainda estive vivo: " + idadeAtualNewton);
+        System.out.println(universidade.getNome());
     }
 
     public int caculaIdade(int ano) {
@@ -38,6 +32,11 @@ public class Pessoa {
 //        setMes(mes);
 //        setAno(ano);
 //    }
+
+    public String toString() {
+
+        return "Pessoa: " + this.nome + " está na universidade: " + this.universidade.getNome();
+    }
 
     public int informaIdade() {
         return idade;
@@ -69,5 +68,10 @@ public class Pessoa {
     public void setAno(int ano) {
         this.ano = ano;
     }
-
+    public Universidade getUniversidade() {
+        return universidade;
+    }
+    public void setUniversidade(Universidade universidade) {
+        this.universidade = universidade;
+    }
 }
