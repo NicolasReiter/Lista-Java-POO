@@ -10,16 +10,12 @@ public class Pessoa {
     int ano;
     String nome;
     Universidade universidade;
+    Departamento departamento;
 
     public Pessoa(int dia, int mes, int ano) {
         setDia(dia);
         setMes(mes);
         setAno(ano);
-    }
-
-    public static void mostraUniversidade(Universidade universidade) {
-
-        System.out.println(universidade.getNome());
     }
 
     public int caculaIdade(int ano) {
@@ -73,5 +69,11 @@ public class Pessoa {
     }
     public void setUniversidade(Universidade universidade) {
         this.universidade = universidade;
+    }
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
 }
