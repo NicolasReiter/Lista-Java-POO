@@ -19,5 +19,6 @@ public class Principal {
         newton.setUniversidade(cambridge);
 
         System.out.println(einstein);
+        System.out.println(newton);
     }
 }
