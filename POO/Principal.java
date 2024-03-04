@@ -5,6 +5,8 @@ public class Principal {
     public static void main(String[] args) {
         Universidade princenton = new Universidade("Princenton");
         Universidade cambridge = new Universidade("Cambridge");
+        Departamento juridico = new Departamento("Jurídico");
+        Departamento fisica = new Departamento("Física");
 
         Pessoa einstein = new Pessoa(14, 3, 1879);
         einstein.setNome("Albert Einstein");
@@ -20,5 +22,8 @@ public class Principal {
 
         System.out.println(einstein);
         System.out.println(newton);
+
+        einstein.setDepartamento(juridico);
+        cambridge.setDepartamento(fisica);
     }
 }
