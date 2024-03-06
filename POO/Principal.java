@@ -1,13 +1,8 @@
 package POO;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Principal {
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-
         Universidade princenton = new Universidade("Princenton");
         Universidade cambridge = new Universidade("Cambridge");
 
