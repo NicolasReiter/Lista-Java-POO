@@ -1,7 +1,6 @@
 package POO.HerancaEPolimorfismo.Ex7;
 
 public class PolReg {
-
     int numeroLados;
     int tamanhoLado;
 
