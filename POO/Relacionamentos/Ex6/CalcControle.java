@@ -10,7 +10,6 @@ public class CalcControle {
         System.out.println("Digite o primeiro número: ");
         dados.setOperando1(teclado.nextDouble());
 
-
         while (dados.getOperacao() != 's') {
             System.out.println("Qual operador desejas usar?");
             dados.setOperacao(teclado.next().charAt(0));
