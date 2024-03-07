@@ -15,7 +15,6 @@ public class CalcControle {
             dados.setOperacao(teclado.next().charAt(0));
             System.out.println("Digite o segundo número: ");
             dados.setOperando2(teclado.nextDouble());
-
             double resultado = opera(dados.getOperando1(), dados.getOperando2(), dados.getOperacao());
             dados.setOperando1(resultado);
             System.out.println("====RESULTADO====");
