@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Universidade extends ArrayList<Departamento> {
 
     String nome;
-
     Departamento departamento;
 
     public Universidade(String nome) {
