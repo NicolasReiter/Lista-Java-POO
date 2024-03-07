@@ -1,8 +1,6 @@
 package POO.HerancaEPolimorfismo.Ex7;
 
 public class TrianguloEq extends PolReg{
-
-
     public TrianguloEq(int numeroLados, int tamanhoLado) {
         super(numeroLados, tamanhoLado);
     }
