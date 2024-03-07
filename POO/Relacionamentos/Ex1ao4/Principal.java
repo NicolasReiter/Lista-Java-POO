@@ -1,7 +1,6 @@
 package POO.Relacionamentos.Ex1ao4;
 
 public class Principal {
-
     public static void main(String[] args) {
         Universidade princenton = new Universidade("Princenton");
         Universidade cambridge = new Universidade("Cambridge");
