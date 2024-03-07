@@ -1,4 +1,4 @@
-package POO.HerancaEPolimorfismo;
+package POO.HerancaEPolimorfismo.Ex7;
 
 public class TrianguloEq extends PolReg{
 

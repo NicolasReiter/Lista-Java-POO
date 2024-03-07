@@ -1,4 +1,4 @@
-package POO.HerancaEPolimorfismo;
+package POO.HerancaEPolimorfismo.Ex7;
 
 public class Quadrado extends PolReg{
     public Quadrado(int numeroLados, int tamanhoLado) {

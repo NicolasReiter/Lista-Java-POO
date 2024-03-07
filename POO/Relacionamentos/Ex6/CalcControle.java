@@ -1,4 +1,4 @@
-package POO.Calculadora;
+package POO.Relacionamentos.Ex6;
 
 import java.util.Scanner;
 

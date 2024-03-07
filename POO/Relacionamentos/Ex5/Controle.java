@@ -1,4 +1,6 @@
-package POO;
+package POO.Relacionamentos.Ex5;
+
+import POO.Relacionamentos.Ex5.Aluno;
 
 import java.util.ArrayList;
 import java.util.Scanner;

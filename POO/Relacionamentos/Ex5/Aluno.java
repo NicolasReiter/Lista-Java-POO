@@ -1,4 +1,4 @@
-package POO;
+package POO.Relacionamentos.Ex5;
 
 public class Aluno {
     String nome;

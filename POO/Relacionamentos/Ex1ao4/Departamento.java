@@ -1,4 +1,4 @@
-package POO;
+package POO.Relacionamentos.Ex1ao4;
 
 public class Departamento {
 
