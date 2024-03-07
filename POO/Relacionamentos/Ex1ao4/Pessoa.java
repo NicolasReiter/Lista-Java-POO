@@ -25,7 +25,7 @@ public class Pessoa {
 
     public String toString() {
 
-        return "Pessoa: " + this.nome + " está na universidade: " + this.universidade.getNome();
+        return this.nome + " está na universidade: " + this.universidade.getNome();
     }
 
     public int informaIdade() {
