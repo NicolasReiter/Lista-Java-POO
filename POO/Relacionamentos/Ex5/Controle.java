@@ -36,7 +36,6 @@ public class Controle {
 
             totalNotas += (aluno.getNotaParcial1() + aluno.getNotaParcial2());
         }
-
         double mediaTurma = (double) totalNotas / classe.size();
 
         for (int i = 0; i < classe.size(); i++) {
