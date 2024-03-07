@@ -9,7 +9,6 @@ public class Quadrado extends PolReg{
         double resultado = 0;
 
         resultado = (tamanhoLado * tamanhoLado);
-
         return resultado;
     }
 }
