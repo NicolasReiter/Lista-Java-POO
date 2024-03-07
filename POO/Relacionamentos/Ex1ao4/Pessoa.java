@@ -23,12 +23,6 @@ public class Pessoa {
         return tempoAtual.getYear() - ano;
     }
 
-//    public void ajustaDataDeNascimento(int dia, int mes, int ano) {
-//        setDia(dia);
-//        setMes(mes);
-//        setAno(ano);
-//    }
-
     public String toString() {
 
         return "Pessoa: " + this.nome + " está na universidade: " + this.universidade.getNome();
