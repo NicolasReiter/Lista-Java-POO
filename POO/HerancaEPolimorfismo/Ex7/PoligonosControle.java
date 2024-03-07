@@ -8,7 +8,6 @@ public class PoligonosControle {
 
         System.out.println("Qual polígono você deseja crias?");
         String poligono = teclado.next().toLowerCase();
-
         switch (poligono) {
             case "regular":
                 System.out.println("Quantos lados tem seu polígono regular?");
