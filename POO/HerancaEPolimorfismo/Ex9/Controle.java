@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Controle {
     public static void main(String[] args) {
-
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Você deseja instanciar um aluno ou uma pessoa?");
