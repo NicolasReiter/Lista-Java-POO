@@ -14,7 +14,7 @@ public class PoligonosControle {
                 int numLados = teclado.nextInt();
                 System.out.println("Qual o tamanho dos lados?");
                 int ladosRegular = teclado.nextInt();
-                PolReg regular = new PolReg(numLados, ladosRegular);
+                PolReg regular = new Quadrado(numLados, ladosRegular);
 
                 System.out.println("Tamanho do seu perimetro: " + regular.calculaPerimetro());
                 System.out.println("Valor do ângulo interno: " + regular.calculaAngulo());
