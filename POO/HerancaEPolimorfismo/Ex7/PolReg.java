@@ -24,9 +24,4 @@ public class PolReg {
         resultado = totalAngulo / numeroLados;
         return resultado;
     }
-
-    public double calculaArea() {
-
-        return 0;
-    }
 }
