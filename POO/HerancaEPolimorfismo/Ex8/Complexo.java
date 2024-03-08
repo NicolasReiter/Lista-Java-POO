@@ -1,7 +1,6 @@
 package POO.HerancaEPolimorfismo.Ex8;
 
 public class Complexo {
-
     float real;
     float imaginario;
 
@@ -10,14 +9,17 @@ public class Complexo {
         this.imaginario = imaginario;
     }
 
-    public void Modulo() {
+    public float Modulo() {
         double resultado = 0;
 
         resultado = Math.sqrt((real * real) + (imaginario * imaginario));
-
+        return (float) resultado;
     }
 
-    public void Angulo() {
+    public float Angulo() {
+        double anguloRadianos = Math.atan2(imaginario, real);
+        double anguloGraus = Math.toDegrees(anguloRadianos);
 
+        return (float) anguloGraus;
     }
 }
