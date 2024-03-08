@@ -8,7 +8,6 @@ public class Aluno extends Pessoa{
         this.curso = curso;
     }
 
-
     public void mostraDados() {
         System.out.println("Nome da pessoa: " + nome);
         System.out.println("Idade da pessoa: " + idade);
