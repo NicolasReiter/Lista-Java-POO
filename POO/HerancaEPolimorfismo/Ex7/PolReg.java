@@ -1,6 +1,6 @@
 package POO.HerancaEPolimorfismo.Ex7;
 
-public class PolReg {
+public abstract class PolReg {
     int numeroLados;
     int tamanhoLado;
 
@@ -24,4 +24,6 @@ public class PolReg {
         resultado = totalAngulo / numeroLados;
         return resultado;
     }
+
+    public abstract double calculaArea();
 }
