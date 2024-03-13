@@ -1,21 +1,23 @@
 package EstruturasDeDados.Ex2;
 
-public class ListNode {
-    private String nome;
-    private ListNode proximo;
+public class ListNode<T> {
+    T nome;
+    ListNode proximo;
 
-    public String getNome() {
+    public ListNode(T nome, ListNode proximo) {
+        this.nome = nome;
+        this.proximo = proximo;
+    }
+
+    public T getNome() {
         return nome;
     }
-
-    public void setNome(String nome) {
+    public void setNome(T nome) {
         this.nome = nome;
     }
-
     public ListNode getProximo() {
         return proximo;
     }
-
     public void setProximo(ListNode proximo) {
         this.proximo = proximo;
     }
