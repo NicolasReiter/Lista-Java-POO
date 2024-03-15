@@ -1,12 +1,11 @@
 package EstruturasDeDados.Ex3;
 
-import java.util.Stack;
-
 public class Posfixa {
 
     public static void main(String[] args) {
         String operacao = "(1 + 5) * 2 + 13";
         System.out.println(conversao(operacao));
+        System.out.println(calcula());
     }
     public static String conversao(String infixa) {
         String posfixa = "";
@@ -73,16 +72,34 @@ public class Posfixa {
     }
 
     public static int calcula(String posfixa) {
-        String vetor[] = posfixa.split(" ");
-        for (int i = 0; i < vetor.length; i++) {
-            int validação
-            if (vetor[i] != "*" || vetor[i] != "/" || vetor[i] != "+" ||vetor[i] != "-") {
-
+        Pilha p = new Pilha(posfixa.length());
+        int arg1, arg2;
+        char c;
+        for (int i=0; i < p.tamanhoPilha(); i++) {
+            c = posfixa.charAt(i);
+            if (Character.isDigit(c))
+                p.push(Character.digit(c,10));
+            else if(c=='+') {
+                arg1 = (int) p.peek(); p.pop();
+                arg2 = (int) p.peek(); p.pop();
+                p.push(arg1+arg2);
             }
-            if ((vetor[i] == "*" || vetor[i] == "/") && (vetor[i - 1] == ((int)vetor[i - 1]) && vetor[i - 2]))  {
-
+            else if(c=='*') {
+                arg1 = (int) p.peek(); p.pop();
+                arg2 = (int) p.peek(); p.pop();
+                p.push(arg1*arg2);
+            }
+            else if(c=='-') {
+                arg1 = (int) p.peek(); p.pop();
+                arg2 = (int) p.peek(); p.pop();
+                p.push(arg1-arg2);
+            }
+            else if(c=='/') {
+                arg1 = (int) p.peek(); p.pop();
+                arg2 = (int) p.peek(); p.pop();
+                p.push(arg1/arg2);
             }
         }
-
+        return (int) p.peek();
     }
 }
