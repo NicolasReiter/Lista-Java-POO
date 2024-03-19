@@ -3,65 +3,64 @@ package EstruturasDeDados.Ex3;
 public class Posfixa {
 
     public static void main(String[] args) {
-        String operacao = "(1 + 5) * 2 + 13";
+        String operacao = "( 1 + 5 ) * 2 + 13";
         System.out.println(conversao(operacao));
-        System.out.println(calcula());
+        //System.out.println(calcula(conversao(operacao)));
     }
-    public static String conversao(String infixa) {
-        String posfixa = "";
-        Pilha<Integer> pilha = new Pilha<Integer>(infixa.length());
+    public static Pilha<String> conversao(String infixa) {
+        String vetor[] = infixa.split(" ");
+        Pilha<String> pilha = new Pilha(infixa.length());
+        Pilha<String> posfixa = new Pilha<>(infixa.length());
         int cont = 0;
-        char c;
+        String c;
 
-        while(cont < infixa.length()) {
-            c = infixa.charAt(cont);
+        while(cont < vetor.length) {
+            c = vetor[cont];
             switch(c) {
-                case '*':
-                case '/':
-                case '+':
-                case '-':
-                case '^':
-                    while((!pilha.estaVazia()) && prioridade(c) <= prioridade((char)((int) pilha.peek()))) {
-                        posfixa += (char) ((int) pilha.pop());
+                case "*":
+                case "/":
+                case "+":
+                case "-":
+                    while((!pilha.estaVazia()) && prioridade(c) <= prioridade(pilha.peek())) {
+                        posfixa.push(pilha.pop());
                     }
-                        pilha.push((int) c);
+                    pilha.push(c);
                     break;
-                case '(':
-                        pilha.push((int) c);
+                case "(":
+                        pilha.push(c);
                     break;
-                case ')':
-                    while((char)((int)pilha.peek()) != '(') {
-                        posfixa += (char) ((int) pilha.pop());
+                case ")":
+                    while((pilha.peek()) != "(") {
+                        posfixa.push(pilha.pop());
                     }
-                    if((char)((int)pilha.peek()) == '(') {
+                    if(pilha.peek() == "(") {
                         pilha.pop();
                     }
                     break;
                 default:
-                    posfixa += infixa.charAt(cont);
+                    posfixa.push(c);
                     break;
             }
             cont++;
         }
         while(pilha.tamanhoPilha() > 0) {
-            if ((char) ((int) pilha.peek()) != '(')
-                posfixa += (char) ((int) pilha.pop());
+            if (pilha.peek() != "(")
+                posfixa.push(pilha.pop());
             else
                 pilha.pop();
         }
         return posfixa;
     }
 
-    public static int prioridade(char elemento) {
+    public static int prioridade(String elemento) {
         int prioridade;
-        switch(elemento)
-        {
-            case '+':
-            case '-':
+        switch(elemento) {
+            case "+":
+            case "-":
                 prioridade = 1;
                 break;
-            case '*':
-            case '/':
+            case "*":
+            case "/":
                 prioridade = 2;
                 break;
             default:
@@ -71,35 +70,31 @@ public class Posfixa {
         return prioridade;
     }
 
-    public static int calcula(String posfixa) {
-        Pilha p = new Pilha(posfixa.length());
+    public static String calcula(String posfixa) {
+        String vetor[] = posfixa.split(" ");
+        Pilha p = new Pilha(vetor.length);
         int arg1, arg2;
-        char c;
-        for (int i=0; i < p.tamanhoPilha(); i++) {
-            c = posfixa.charAt(i);
-            if (Character.isDigit(c))
-                p.push(Character.digit(c,10));
-            else if(c=='+') {
+        for (int i=0; i < vetor.length; i++) {
+            if (true) {
+                p.push(vetor[i]);
+            } else if(vetor[i] == "+") {
                 arg1 = (int) p.peek(); p.pop();
                 arg2 = (int) p.peek(); p.pop();
                 p.push(arg1+arg2);
-            }
-            else if(c=='*') {
+            } else if(vetor[i] == "*") {
                 arg1 = (int) p.peek(); p.pop();
                 arg2 = (int) p.peek(); p.pop();
                 p.push(arg1*arg2);
-            }
-            else if(c=='-') {
+            } else if(vetor[i] == "-") {
                 arg1 = (int) p.peek(); p.pop();
                 arg2 = (int) p.peek(); p.pop();
                 p.push(arg1-arg2);
-            }
-            else if(c=='/') {
+            } else if(vetor[i] == "/") {
                 arg1 = (int) p.peek(); p.pop();
                 arg2 = (int) p.peek(); p.pop();
                 p.push(arg1/arg2);
             }
         }
-        return (int) p.peek();
+        return (String) p.peek();
     }
 }
