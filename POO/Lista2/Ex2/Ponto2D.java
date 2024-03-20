@@ -15,6 +15,11 @@ public class Ponto2D  implements Cloneable{
         this.y = y;
     }
 
+    public Ponto2D(Ponto2D ponto) {
+       this.setX(ponto.getX());
+       this.setY(ponto.getY());
+    }
+
     public void movimentaPonto(double x, double y) {
         setX(x);
         setY(y);
@@ -33,7 +38,7 @@ public class Ponto2D  implements Cloneable{
 
     public double distancia(Ponto2D ponto) {
         double distanciaValor = 0;
-        distanciaValor = Math.sqrt(((this.getX() - ponto.getX()) * (this.getX() - ponto.getX())) + ((this.getY() - ponto.getY()) * (this.getY() - ponto.getY())));
+        distanciaValor = Math.sqrt(((ponto.getX() - this.getX()) * (ponto.getX() - this.getX())) + ((ponto.getY() - this.getY()) * (ponto.getY() - this.getY())));
 
         return distanciaValor;
     }
