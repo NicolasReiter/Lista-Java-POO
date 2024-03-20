@@ -6,6 +6,8 @@ public class Ponto2D  implements Cloneable{
     private double z;
 
     public Ponto2D() {
+        setX(0);
+        setY(0);
     }
 
     public Ponto2D(double x, double y) {
@@ -18,20 +20,20 @@ public class Ponto2D  implements Cloneable{
         setY(y);
     }
 
-    public boolean comparacao(double x, double y) {
-        if (x == y) {
+    public boolean comparacao(Ponto2D ponto) {
+        if (this.getX() == ponto.getX() && this.getY() == ponto.getY()) {
             return true;
         }
         return false;
     }
 
-    public String toString(double x, double y) {
-        return "X: " + x + "\n" + "Y: " + y;
+    public String toString() {
+        return "X: " + this.getX()  + ", Y: " + this.getY();
     }
 
-    public double distancia(Ponto2D um, Ponto2D dois) {
+    public double distancia(Ponto2D ponto) {
         double distanciaValor = 0;
-        distanciaValor = Math.sqrt(((um.getX() - dois.getX())*(um.getX() - dois.getX())) + ((um.getY() - dois.getY())*(um.getY() - dois.getY())));
+        distanciaValor = Math.sqrt(((this.getX() - ponto.getX()) * (this.getX() - ponto.getX())) + ((this.getY() - ponto.getY()) * (this.getY() - ponto.getY())));
 
         return distanciaValor;
     }
