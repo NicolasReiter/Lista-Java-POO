@@ -3,7 +3,6 @@ package POO.Lista2.Ex2;
 public class Ponto2D  implements Cloneable{
     private double x;
     private double y;
-    private double z;
 
     public Ponto2D() {
         setX(0);
@@ -47,7 +46,7 @@ public class Ponto2D  implements Cloneable{
         try {
             return super.clone();
         } catch (CloneNotSupportedException e) {
-            System.out.println("Cloning not allowed.");
+            System.out.println("Clone não autorizado");
             return this;
         }
     }
