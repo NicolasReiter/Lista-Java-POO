@@ -1,4 +1,4 @@
-package POO.Lista2;
+package POO.Lista2.Ex1;
 
 public class Contador {
     private int itens;
