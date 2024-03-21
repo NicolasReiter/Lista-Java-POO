@@ -43,11 +43,11 @@ public class NumeroComplexo {
         System.out.println(string(resultadoInteiro, resultadoImaginario));
     }
 
-    public int modulo() {
-        int resultado = 0;
+    public void modulo() {
+        double resultado = 0;
 
-        resultado = (int) Math.sqrt((this.getNumeroInteiro() * this.getNumeroInteiro()) + (this.getNumeroImaginario() * this.getNumeroImaginario()));
-        return resultado;
+        resultado = Math.sqrt((this.getNumeroInteiro() * this.getNumeroInteiro()) + (this.getNumeroImaginario() * this.getNumeroImaginario()));
+        System.out.println(resultado);
     }
 
     public boolean comparacao(NumeroComplexo numero) {
@@ -58,7 +58,10 @@ public class NumeroComplexo {
     }
 
     public String string(int resultadoInteiro, int resultadoImaginario) {
-        return resultadoInteiro + " + " + resultadoImaginario + "i";
+        if (resultadoImaginario > 0) {
+            return resultadoInteiro + " + " + resultadoImaginario + "i";
+        }
+        return resultadoInteiro + " - " + Math.abs(resultadoImaginario) + "i";
     }
 
     public int getNumeroInteiro() {
