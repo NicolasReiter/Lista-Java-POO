@@ -1,6 +1,6 @@
 package POO.Lista2.Ex2;
 
-public class Controle {
+public class Teste {
     public static void main(String[] args) {
         Ponto2D ponto1 = new Ponto2D();
         Ponto2D ponto2 = new Ponto2D(4, -2);

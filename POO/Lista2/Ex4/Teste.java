@@ -1,6 +1,6 @@
 package POO.Lista2.Ex4;
 
-public class Controle {
+public class Teste {
     public static void main(String[] args) {
         Reta pontoTeste = new Reta(2, 1);
         Reta pontoTeste2 = new Reta(4, 7);
