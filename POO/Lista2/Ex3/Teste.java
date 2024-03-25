@@ -1,6 +1,6 @@
 package POO.Lista2.Ex3;
 
-public class Controle {
+public class Teste {
     public static void main(String[] args) {
         NumeroComplexo complexoSoma =  new NumeroComplexo(6, 5);
         NumeroComplexo complexoSoma2 =  new NumeroComplexo(2, -1);
