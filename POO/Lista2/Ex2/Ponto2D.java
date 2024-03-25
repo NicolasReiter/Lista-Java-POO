@@ -5,8 +5,8 @@ public class Ponto2D  implements Cloneable{
     private double y;
 
     public Ponto2D() {
-        setX(0);
-        setY(0);
+        this.setX(0);
+        this.setY(0);
     }
 
     public Ponto2D(double x, double y) {
@@ -20,8 +20,8 @@ public class Ponto2D  implements Cloneable{
     }
 
     public void movimentaPonto(double x, double y) {
-        setX(x);
-        setY(y);
+        this.setX(x);
+        this.setY(y);
     }
 
     public boolean comparacao(Ponto2D ponto) {
