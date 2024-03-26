@@ -14,17 +14,17 @@ public class Continente extends ArrayList {
         this.add(pais);
     }
 
-    public double calcularDimensaoTotal() {
-        double total = 0;
+    public long calcularDimensaoTotal() {
+        long total = 0;
         for (int i = 0; i < this.size(); i++) {
             Pais pais = (Pais) this.get(i);
-            total += pais.getDimensao();
+            total += (long) pais.getDimensao();
         }
         return total;
     }
 
-    public double calcularPopulacaoTotal() {
-        double total = 0;
+    public long calcularPopulacaoTotal() {
+        long total = 0;
         for (int i = 0; i < this.size(); i++) {
             Pais pais = (Pais) this.get(i);
             total += pais.getPopulacao();
