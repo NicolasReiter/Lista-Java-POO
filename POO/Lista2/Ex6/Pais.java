@@ -1,28 +1,48 @@
 package POO.Lista2.Ex6;
 
-public class Pais {
-    int codigoISO;
+import java.util.ArrayList;
+
+public class Pais extends ArrayList {
+    String codigoISO;
     String nome;
     int populacao;
     double dimensao;
 
-    public Pais(int codigoISO, String nome, double dimensao) {
+    public Pais(String codigoISO, String nome, int populacao, double dimensao) {
         this.codigoISO = codigoISO;
         this.nome = nome;
+        this.populacao = populacao;
         this.dimensao = dimensao;
     }
 
     public boolean verificarIgualdade(Pais pais) {
-        if (this.getCodigoISO() == pais.getCodigoISO()) {
-            return true;
-        }
-        return false;
+        return this.getCodigoISO().equals(pais.getCodigoISO());
     }
 
-    public int getCodigoISO() {
+    public double calcularDensidade() {
+        return this.getPopulacao() / this.getDimensao();
+    }
+
+    public boolean verificarLimitrofe(Pais pais) {
+        return this.contains(pais);
+    }
+
+    public void verificarVizinhos(Pais pais) {
+        System.out.print("Países Vizinhos -> ");
+        for (int i = 0; i < this.size(); i++) {
+            Pais paisVizinho = (Pais) this.get(i);
+            for (int j = 0; j < pais.size(); j++) {
+                if (this.get(i) == pais.get(j)) {
+                    System.out.print(paisVizinho.getNome() + " ");
+                }
+            }
+        }
+    }
+
+    public String getCodigoISO() {
         return codigoISO;
     }
-    public void setCodigoISO(int codigoISO) {
+    public void setCodigoISO(String codigoISO) {
         this.codigoISO = codigoISO;
     }
     public String getNome() {
