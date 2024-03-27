@@ -30,8 +30,8 @@ public class Pessoa {
         pai = this.getPai();
         mae = this.getMae();
         return (pai.equals(pessoa) || mae.equals(pessoa) ||
-                pai.getPai().equals(pessoa.getPai()) || pai.getMae().equals(pessoa.getMae()) ||
-                mae.getPai().equals(pessoa.getPai()) || mae.getMae().equals(pessoa.getMae())) ;
+                pai.getPai().equals(pessoa) || pai.getMae().equals(pessoa) ||
+                mae.getPai().equals(pessoa) || mae.getMae().equals(pessoa));
     }
 
     public String getNome() {
