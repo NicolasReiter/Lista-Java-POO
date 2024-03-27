@@ -3,8 +3,7 @@ package POO.Lista2.Ex9;
 import java.util.ArrayList;
 
 public class Conjunto extends ArrayList{
-    String elemtento;
-
+    String elemento;
     public Conjunto() {
     }
 
@@ -24,13 +23,13 @@ public class Conjunto extends ArrayList{
         }
     }
 
-    public void uniao(ArrayList outraLista) {
+    public void uniao(Conjunto outraLista) {
         for (int i = 0; i < outraLista.size(); i++) {
             this.adiciona((String) outraLista.get(i));
         }
     }
 
-    public ArrayList interseccao(ArrayList outraLista) {
+    public ArrayList interseccao(Conjunto outraLista) {
         ArrayList novaLista = new ArrayList();
         for (int i = 0; i < outraLista.size(); i++) {
             if (this.contains(outraLista.get(i))) {
@@ -40,7 +39,7 @@ public class Conjunto extends ArrayList{
         return novaLista;
     }
 
-    public ArrayList menos(ArrayList outraLista) {
+    public ArrayList menos(Conjunto outraLista) {
         ArrayList novaLista = new ArrayList();
         for (int i = 0; i < outraLista.size(); i++) {
             if (!outraLista.contains(this.get(i))) {
