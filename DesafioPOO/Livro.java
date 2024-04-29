@@ -1,7 +1,6 @@
 package DesafioPOO;
 
 public class Livro {
-
     String codigo;
     String titulo;
     String autor;
