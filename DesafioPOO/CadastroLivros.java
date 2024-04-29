@@ -1,8 +1,5 @@
 package DesafioPOO;
 
-import DesafioPOO.BookRepository;
-import DesafioPOO.Livro;
-
 import java.util.Scanner;
 
 public class CadastroLivros {
