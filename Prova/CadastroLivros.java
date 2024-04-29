@@ -26,7 +26,6 @@ public class CadastroLivros {
             int anoPublicacao = teclado.nextInt();
 
             Livro livro = new Livro(codigo, titulo, autor, anoPublicacao);
-
             repositorio.addBook(livro);
         }
 
