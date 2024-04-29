@@ -1,4 +1,4 @@
-package Prova;
+package DesafioPOO;
 
 import DesafioPOO.BookRepository;
 import DesafioPOO.Livro;
